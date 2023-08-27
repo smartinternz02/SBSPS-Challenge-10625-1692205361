@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus Placement Prediction</title>
+    
+    <style>
+        body {
+            background-color: azure;
+          }
+        
+          h1{
+            background-color: #824CA7;
+            color: whitesmoke;
+            padding: 30px;
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-align: center;
+            margin: 0;
+          }
+        
+          ul{
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+          }
+        
+          li{
+            float: left;
+          }
+        
+          li a{
+            display: block;
+            color: white;
+            width: 100px;
+            text-align: center;
+            padding: 20px 19px;
+            text-decoration: none;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-weight: 450;
+          }
+        
+          li a:hover{
+            background-color: #111;
+            color: white;
+          }
+        
+          .active{
+            background-color: #B9C406;
+            color: black;
+          }
+        
+          p{
+            text-align: center;
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-weight: bolder;
+            color: #B9C406;
+          }
+        
+          div{
+            width: 600px;
+            height: 480px;
+            border: 1px solid;
+            margin-left: 300px;
+            background-color: #111;
+            border-radius: 15px;
+            color: #ccb8da;
+          }
+        
+          form{
+            text-align: center;
+          }
+        
+          input[type=text]{
+            width: 30%;
+            margin-left: 4px;
+            padding: 8px;
+            box-sizing: border-box;
+            background-color: #333;
+            color: white;
+        
+          }
+          input[type=number]{
+            width: 30%;
+            margin-left: 4px;
+            padding: 8px;
+            box-sizing: border-box;
+            background-color: #333;
+            color: white;
+          }
+        
+          select{
+            width: 30%;
+            padding: 8px;
+            margin-left: 4px;
+            border: none;
+            border-radius: 4px;
+            background-color: #333;
+            color: white;
+          }
+        
+          select.hover{
+            background-color: #824CA7;
+          }
+        
+          input[type=submit] {
+            background-color:#824CA7 ;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            padding: 16px 32px;
+            text-decoration: none;
+            margin: 4px 2px;
+            cursor: pointer;
+          }
+          
+        
+          input:focus {
+            border: 2px solid whitesmoke;
+           
+            
+          }
+
+          h2{
+            font-family: text-align: center;
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-weight: bolder;
+            color: #824CA7;
+          }
+        
+        
+        </style>        
+
+</head>
+<body>
+    
+    <h1> CAMPUS PLACEMENT PREDICTION</h1>
+    <ul>
+        <li><a href="/display" class="active">PLACEMENTS</a></li>
+        <li><a href="/cluster">DASHBOARD</a></li>
+    </ul><br><br>
+    
+    <form action='/display' method="POST"><div>
+        <p>Amidst all the chaos,<br>
+            TARS's got your back
+            </p><br><br>
+            ID:<input type="text" name="id" required placeholder="Enter ID"><br><br>
+            CGPA:<input type="number" name="cgpa" required placeholder="Enter CGPA" step='0.01'><br><br>
+            Techskills average score:<input type="number" name="tas" required placeholder="out of 10" step='0.01'><br><br>
+            Domain Interest:<select name="di">
+                <option value='Networking'>Networking</option>
+                <option value='CloudComp'>Cloud Computing</option>
+                <option value='WebServices'>Web Services</option>
+                <option value='DataAnalytics'>Data Analytics</option>
+                <option value='QualityAssurance'>Quality Assurance</option>
+                <option value='AI'>Artificial Intelligence</option>
+            </select><br><br><br>
+            <input type="submit" value="Predict!"><br><br></div><br>
+
+            <h2>{{y}}</h2>
+    </form>
+
+ 
+    
+</body>
+</html>

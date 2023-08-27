@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus Placement Prediction</title>
+    <style>
+        body {
+            background-color: azure;
+          }
+        
+          h1{
+            background-color: #824CA7;
+            color: whitesmoke;
+            padding: 30px;
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-align: center;
+            margin: 0;
+          }
+        
+          ul{
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+          }
+        
+          li{
+            float: left;
+          }
+        
+          li a{
+            display: block;
+            color: white;
+            width: 100px;
+            text-align: center;
+            padding: 20px 19px;
+            text-decoration: none;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-weight: 450;
+          }
+        
+          li a:hover{
+            background-color: #111;
+            color: white;
+          }
+        
+          .active{
+            background-color: #B9C406;
+            color: black;
+          }
+
+          p{
+            text-align: center;
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-weight: bolder;
+            color: #B9C406;
+          }
+
+          div{
+            width: 600px;
+            height: 400px;
+            border: 1px solid;
+            margin-left: 300px;
+            background-color: #111;
+            border-radius: 15px;
+            color: #ccb8da;
+          }
+        
+          form{
+            text-align: center;
+          }
+
+          input[type=number]{
+            width: 30%;
+            margin-left: 4px;
+            padding: 8px;
+            box-sizing: border-box;
+            background-color: #333;
+            color: white;
+          }
+        
+          select{
+            width: 30%;
+            padding: 8px;
+            margin-left: 4px;
+            border: none;
+            border-radius: 4px;
+            background-color: #333;
+            color: white;
+          }
+        
+          select.hover{
+            background-color: #824CA7;
+          }
+        
+          input[type=submit] {
+            background-color:#824CA7 ;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            padding: 16px 32px;
+            text-decoration: none;
+            margin: 4px 2px;
+            cursor: pointer;
+          }
+          
+        
+          input:focus {
+            border: 2px solid whitesmoke;
+           
+            
+          }
+
+          h2{
+            font-family: text-align: center;
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-weight: bolder;
+            color: #824CA7;
+          }
+
+          table {
+            border-collapse: collapse;
+            width: 100%;
+            background-color: #333
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+            color:#B9C406;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        h3{
+          font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+          font-weight: bolder;
+          color: #824CA7;
+          text-align:center;
+        }
+
+        h4{
+          font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+          font-weight: bolder;
+          color: green;
+        }
+
+        dl{
+          font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+          background-color: black;
+          color: white;
+          text-align:center;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <h1>WELCOME TO DASHBOARD!</h1>
+    <ul>
+        <li><a href="/display" >PLACEMENTS</a></li>
+        <li><a href="/cluster" class="active">DASHBOARD</a></li>
+    </ul><br><br>
+
+    <form action='/cluster' method="POST"><div>
+        <p>Fill out the details,<br>
+            to check the Student's cluster
+            </p><br><br>
+            CGPA:<input type="number" name="cl_cgpa" required placeholder="Enter CGPA" step='0.01'><br><br>
+            Techskills average score:<input type="number" name="cl_tas" required placeholder="out of 10" step='0.01'><br><br>
+            Domain Interest:<select name="cl_di">
+                <option value='Networking'>Networking</option>
+                <option value='CloudComp'>Cloud Computing</option>
+                <option value='WebServices'>Web Services</option>
+                <option value='DataAnalytics'>Data Analytics</option>
+                <option value='QualityAssurance'>Quality Assurance</option>
+                <option value='AI'>Artificial Intelligence</option>
+            </select><br><br><br>
+            <input type="submit" value="Check Cluster!"><br><br></div><br>
+
+            <h2>{{y}}</h2>
+
+    </form>
+
+    
+    <h1>Cluster Information</h1>
+    <table>
+        <tr>
+            <th></th>
+            <th>Min Values</th>
+            <th>Max Values</th>
+        </tr>
+        <tr>
+            <td>Cluster 0</td>
+            <td>
+                CGPA: 6.41<br>
+                avg_tech: 5.233333<br>
+                domain_interest: 0.000000<br>
+                Placed: 0.000000<br>
+                skill_cluster: 0.000000<br>
+                num_cluster: 0.000000
+            </td>
+            <td>
+                CGPA: 9.37<br>
+                avg_tech: 7.85<br>
+                domain_interest: 5.00<br>
+                Placed: 1.00<br>
+                skill_cluster: 5.00<br>
+                num_cluster: 0.00
+            </td>
+        </tr>
+        <tr>
+            <td>Cluster 1</td>
+            <td>
+                CGPA: 8.04<br>
+                avg_tech: 7.352764<br>
+                domain_interest: 0.000000<br>
+                Placed: 0.000000<br>
+                skill_cluster: 0.000000<br>
+                num_cluster: 1.000000
+            </td>
+            <td>
+                CGPA: 9.63<br>
+                avg_tech: 9.10<br>
+                domain_interest: 5.00<br>
+                Placed: 1.00<br>
+                skill_cluster: 5.00<br>
+                num_cluster: 1.00
+            </td>
+        </tr>
+        <tr>
+            <td>Cluster 2</td>
+            <td>
+                CGPA: 6.52<br>
+                avg_tech: 3.916667<br>
+                domain_interest: 0.000000<br>
+                Placed: 0.000000<br>
+                skill_cluster: 1.000000<br>
+                num_cluster: 2.000000
+            </td>
+            <td>
+                CGPA: 7.46<br>
+                avg_tech: 5.583333<br>
+                domain_interest: 5.000000<br>
+                Placed: 0.000000<br>
+                skill_cluster: 4.000000<br>
+                num_cluster: 2.000000
+            </td>
+        </tr>
+    </table>
+    
+    
+      <h3>Students are clustered based on their CGPA and Techskills Scores <br>
+        as these columns had positive correlation with Placed column and CGPA <br>
+        and Techskills score have positive correlation with each other</h3><br><br>
+    
+        <p> 
+        <dl><br><br>
+          <dt>Cluster-0</dt>
+          <dd>It is a group of Students with higher CGPA and average skills score</dd>
+                  <dd><h4>Recommendation: </h4>We recommend Students with portfolio projects, and internships <br>
+                    that'd enhance their skills and improve their chances getting placed.</dd><br><br>
+          <dt>Cluster-1</dt>
+          <dd>It is a group of Students with higher CGPA and higher skills score</dd>
+          <dd><h4>Recommendation: </h4>These students are an asset. <br>
+                    Suggesting them with Companies matching their domain interest would be great!.</dd><br><br>
+          <dt>Cluster-2</dt>
+          <dd>It is a group of Students with lower CGPA and lower skills score</dd>
+                  <dd><h4>Recommendation: </h4>These students require special attention. <br>
+                    We recommend to provide them training, courses and support that'd help them<br>
+                     in improving their skills and Placement chances, inspite of, their low CGPA.</dd><br><br>
+        </dl><br><br><br>
+
+        <h1>HAPPY PLACEMENTS!</h1>
+      </p>
+
+    
+
+  
+
+  
+</body>
+</html>
