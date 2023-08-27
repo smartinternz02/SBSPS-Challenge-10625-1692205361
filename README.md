@@ -5,3 +5,6 @@ Here's the proposed solution for the problem of 'Identifying Patterns and Trends
 The Team TARS is here, with the solution that aims to leverage machine learning techniques to gain valuable insights from campus placement data. By analyzing student attributes, academic performance, technical skills and domain interests, we seek to unravel patterns influencing placement success. 
 
 We have not only predicted placement success but also, worked on clustering students based on various attributes. This will empower colleges and universities to optimize their placement processes and provide targeted support to enhance student employability.
+
+Here's the demonstration:
+https://drive.google.com/file/d/1_JJztdoWtV2FGHCWs3qfYKtmPhRq1JRx/view
